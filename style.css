@@ -1,4 +1,4 @@
-//* Reset básico */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #f9f5f0; /* Cor de fundo suave para o corpo da página */
-  color: #5b3a29; /* Cor principal do texto (marrom escuro) */
+  background-color: #8B4513; /* MUDANÇA AQUI: Cor de fundo marrom */
+  color: #f1e6d0; /* Alterado para uma cor mais clara para o texto ficar legível no fundo escuro */
   line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
   padding: 20px; /* Preenchimento em torno do conteúdo do corpo */
 }
@@ -59,6 +59,11 @@ main {
   max-width: 960px; /* Largura máxima do conteúdo principal */
   margin: 0 auto 60px auto; /* Centraliza o conteúdo e adiciona margem inferior */
   padding: 0 15px; /* Preenchimento horizontal para o conteúdo principal */
+  background-color: #f9f5f0; /* Fundo mais claro para o conteúdo principal */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #5b3a29; /* Cor do texto no conteúdo principal para contraste */
+  padding-top: 20px;
 }
 
 section {
@@ -78,3 +83,54 @@ p, ul {
 }
 
 ul {
+  padding-left: 20px; /* Recuo para itens de lista não ordenada */
+}
+
+ul li {
+  margin-bottom: 10px; /* Espaçamento entre itens da lista */
+}
+
+.gallery {
+  display: grid; /* Layout em grade para a galeria */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas na galeria */
+  gap: 15px; /* Espaçamento entre as imagens da galeria */
+}
+
+.gallery img {
+  width: 100%; /* Imagens ocupam 100% da largura da coluna */
+  height: 180px; /* Altura fixa para as imagens */
+  object-fit: cover; /* As imagens cobrem a área sem distorcer */
+  border-radius: 8px; /* Cantos arredondados para as imagens */
+  box-shadow: 0 3px 8px rgba(107, 76, 59, 0.3); /* Sombra suave para as imagens */
+  transition: transform 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Aumenta a imagem ligeiramente ao passar o mouse */
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  background-color: #6b4c3b; /* Cor de fundo do rodapé */
+  color: #f1e6d0; /* Cor do texto no rodapé */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(107, 76, 59, 0.5); /* Sombra para o rodapé */
+}
+
+footer p {
+  margin: 8px 0; /* Espaçamento vertical para parágrafos no rodapé */
+  font-size: 0.9rem; /* Tamanho da fonte para o texto do rodapé */
+}
+
+footer p a {
+    color: #f1e6d0; /* Cor dos links no rodapé */
+    text-decoration: none; /* Remove sublinhado dos links no rodapé */
+    font-weight: 600; /* Peso da fonte para links no rodapé */
+    transition: color 0.3s ease; /* Transição suave para a cor do link no rodapé */
+}
+
+footer p a:hover {
+    color: #d1b89d; /* Cor do link no rodapé ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
