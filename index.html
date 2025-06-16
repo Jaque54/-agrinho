@@ -2,16 +2,15 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agricultura Sustentável e Orgânica - Conexão Campo & Cidade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Agricultura Sustentável e Orgânica - Conexão Campo & Cidade</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Explore a agricultura sustentável e orgânica, métodos práticos e como conectar o campo e a cidade para um futuro mais verde." />
 </head>
 <body>
   <header>
     <h1>Conexão do Campo e da Cidade</h1>
     <h2>Agricultura Sustentável e Orgânica</h2>
-    <nav>
-      <ul>
+    <nav aria-label="Navegação Principal"> <ul>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#metodos">Métodos Práticos</a></li>
         <li><a href="#aplicacao">Aplicação no Dia a Dia</a></li>
@@ -22,11 +21,10 @@
   </header>
 
   <main>
-    <section id="sobre">
-      <h3>O que é Agricultura Sustentável e Orgânica?</h3>
+    <section id="sobre" aria-labelledby="sobre-titulo"> <h3 id="sobre-titulo">O que é Agricultura Sustentável e Orgânica?</h3>
       <p>
         A agricultura sustentável busca produzir alimentos de forma responsável,
-        respeitando o meio ambiente, garantindo a saúde do solo, das plantas, 
+        respeitando o meio ambiente, garantindo a saúde do solo, das plantas,
         dos animais e das pessoas. Já a agricultura orgânica é um método que evita
         o uso de agrotóxicos e fertilizantes químicos, valorizando o equilíbrio
         natural do ecossistema.
@@ -39,8 +37,7 @@
       </p>
     </section>
 
-    <section id="metodos">
-      <h3>Métodos Sustentáveis para Produção Agrícola</h3>
+    <section id="metodos" aria-labelledby="metodos-titulo"> <h3 id="metodos-titulo">Métodos Sustentáveis para Produção Agrícola</h3>
       <ul>
         <li><strong>Rotação de Culturas:</strong> Alternar os tipos de plantas cultivadas para evitar o esgotamento do solo e controlar pragas naturalmente.</li>
         <li><strong>Compostagem:</strong> Transformar resíduos orgânicos em adubo natural, melhorando a fertilidade do solo.</li>
@@ -50,8 +47,7 @@
       </ul>
     </section>
 
-    <section id="aplicacao">
-      <h3>Como Aplicar a Agricultura Sustentável no Dia a Dia</h3>
+    <section id="aplicacao" aria-labelledby="aplicacao-titulo"> <h3 id="aplicacao-titulo">Como Aplicar a Agricultura Sustentável no Dia a Dia</h3>
       <p>
         Mesmo vivendo na cidade, você pode se conectar com a agricultura sustentável:
       </p>
@@ -64,14 +60,13 @@
       </ul>
     </section>
 
-    <section id="imagens">
-      <h3>Galeria de Imagens - Agricultura Sustentável</h3>
+    <section id="imagens" aria-labelledby="imagens-titulo"> <h3 id="imagens-titulo">Galeria de Imagens - Agricultura Sustentável</h3>
       <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Plantação orgânica" />
-        <img src="https://images.unsplash.com/photo-1445510861639-177a916f52c0?auto=format&fit=crop&w=600&q=80" alt="Horta urbana" />
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Compostagem" />
-        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca3?auto=format&fit=crop&w=600&q=80" alt="Agricultor no campo" />
-        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80" alt="Mercado orgânico" />
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Plantação orgânica com solo rico e plantas verdes viçosas." loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1445510861639-177a916f52c0?auto=format&fit=crop&w=600&q=80" alt="Horta urbana com diferentes vegetais crescendo em canteiros elevados." loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Pilha de compostagem em processo de decomposição, com cascas de frutas e folhas." loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca3?auto=format&fit=crop&w=600&q=80" alt="Agricultor inspecionando plantação em um campo aberto sob o sol." loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80" alt="Bancas de mercado com diversos vegetais e frutas orgânicas frescas." loading="lazy" />
       </div>
     </section>
   </main>
@@ -79,9 +74,11 @@
   <footer id="contato">
     <h3>Contato</h3>
     <p>Quer saber mais? Entre em contato conosco!</p>
-    <p>Email: contato@campoecidade.com.br</p>
-    <p>Telefone: (11) 99999-9999</p>
-    <p>© 2025 Conexão do Campo e da Cidade</p>
-  </footer>
+    <p>Email: <a href="mailto:contato@campoecidade.com.br">contato@campoecidade.com.br</a></p> <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p> <p>&copy; <span id="current-year"></span> Conexão do Campo e da Cidade</p> </footer>
+
+  <script>
+    // Script para atualizar dinamicamente o ano no rodapé
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
