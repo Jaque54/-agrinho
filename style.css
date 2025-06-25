@@ -3,134 +3,158 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #8B4513; /* MUDANÇA AQUI: Cor de fundo marrom */
-  color: #f1e6d0; /* Alterado para uma cor mais clara para o texto ficar legível no fundo escuro */
-  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
-  padding: 20px; /* Preenchimento em torno do conteúdo do corpo */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-header {
+/* Header */
+.header {
+  background-color: #6b8e23;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-size: 1.5em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #dcedc1;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&fit=crop') no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 20px;
   text-align: center;
-  background-color: #6b4c3b; /* Cor de fundo do cabeçalho (marrom mais escuro) */
-  color: #f1e6d0; /* Cor do texto no cabeçalho (creme claro) */
-  padding: 30px 15px; /* Preenchimento interno do cabeçalho */
-  border-radius: 8px; /* Cantos arredondados */
-  margin-bottom: 30px; /* Margem abaixo do cabeçalho */
-  box-shadow: 0 4px 8px rgba(107, 76, 59, 0.5); /* Sombra para dar profundidade */
 }
 
-header h1 {
-  font-size: 2.8rem; /* Tamanho da fonte para o título principal */
-  margin-bottom: 10px; /* Margem abaixo do título */
+.hero-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-header h2 {
-  font-weight: 400; /* Peso da fonte para o subtítulo */
-  font-size: 1.6rem; /* Tamanho da fonte para o subtítulo */
-  font-style: italic; /* Estilo itálico para o subtítulo */
+.hero-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-nav ul {
-  list-style: none; /* Remove marcadores de lista */
-  display: flex; /* Exibe itens em linha */
-  justify-content: center; /* Centraliza os itens da navegação */
-  gap: 25px; /* Espaçamento entre os links da navegação */
-  margin-top: 15px; /* Margem acima da navegação */
-}
-
-nav ul li a {
-  color: #f1e6d0; /* Cor dos links da navegação */
-  text-decoration: none; /* Remove sublinhado dos links */
-  font-weight: 600; /* Peso da fonte para os links */
-  font-size: 1rem; /* Tamanho da fonte dos links */
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transição suave para cor e borda */
-}
-
-nav ul li a:hover {
-  color: #d1b89d; /* Cor do link ao passar o mouse */
-  border-bottom: 2px solid #d1b89d; /* Borda inferior ao passar o mouse */
-}
-
-main {
-  max-width: 960px; /* Largura máxima do conteúdo principal */
-  margin: 0 auto 60px auto; /* Centraliza o conteúdo e adiciona margem inferior */
-  padding: 0 15px; /* Preenchimento horizontal para o conteúdo principal */
-  background-color: #f9f5f0; /* Fundo mais claro para o conteúdo principal */
+.hero-image img {
+  width: 100%;
+  max-width: 800px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #5b3a29; /* Cor do texto no conteúdo principal para contraste */
-  padding-top: 20px;
+  margin: 20px auto 0;
+  display: block;
 }
 
-section {
-  margin-bottom: 50px; /* Margem abaixo de cada seção */
+/* About Section */
+.about {
+  background: #fff;
+  padding: 50px 20px;
 }
 
-h3 {
-  margin-bottom: 15px; /* Margem abaixo dos títulos de seção */
-  font-size: 1.8rem; /* Tamanho da fonte para títulos de seção */
-  border-bottom: 2px solid #6b4c3b; /* Borda inferior para títulos de seção */
-  padding-bottom: 5px; /* Preenchimento abaixo da borda do título */
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-p, ul {
-  font-size: 1.1rem; /* Tamanho da fonte para parágrafos e listas */
-  margin-bottom: 15px; /* Margem abaixo de parágrafos e listas */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-ul {
-  padding-left: 20px; /* Recuo para itens de lista não ordenada */
+.about-text {
+  flex: 1;
 }
 
-ul li {
-  margin-bottom: 10px; /* Espaçamento entre itens da lista */
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
-.gallery {
-  display: grid; /* Layout em grade para a galeria */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas na galeria */
-  gap: 15px; /* Espaçamento entre as imagens da galeria */
+/* Production Section */
+.production {
+  background: #e8f5e9;
+  padding: 50px 20px;
 }
 
-.gallery img {
-  width: 100%; /* Imagens ocupam 100% da largura da coluna */
-  height: 180px; /* Altura fixa para as imagens */
-  object-fit: cover; /* As imagens cobrem a área sem distorcer */
-  border-radius: 8px; /* Cantos arredondados para as imagens */
-  box-shadow: 0 3px 8px rgba(107, 76, 59, 0.3); /* Sombra suave para as imagens */
-  transition: transform 0.3s ease; /* Transição suave para o efeito hover */
+.production-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05); /* Aumenta a imagem ligeiramente ao passar o mouse */
-}
-
-footer {
+.production-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
-  padding: 25px 15px;
-  background-color: #6b4c3b; /* Cor de fundo do rodapé */
-  color: #f1e6d0; /* Cor do texto no rodapé */
-  border-radius: 8px; /* Cantos arredondados */
-  box-shadow: 0 4px 8px rgba(107, 76, 59, 0.5); /* Sombra para o rodapé */
 }
 
-footer p {
-  margin: 8px 0; /* Espaçamento vertical para parágrafos no rodapé */
-  font-size: 0.9rem; /* Tamanho da fonte para o texto do rodapé */
+.production-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-footer p a {
-    color: #f1e6d0; /* Cor dos links no rodapé */
-    text-decoration: none; /* Remove sublinhado dos links no rodapé */
-    font-weight: 600; /* Peso da fonte para links no rodapé */
-    transition: color 0.3s ease; /* Transição suave para a cor do link no rodapé */
+.production-card h3 {
+  margin-bottom: 10px;
 }
 
-footer p a:hover {
-    color: #d1b89d; /* Cor do link no rodapé ao passar o mouse */
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+/* Home Farming Section */
+.home-farming {
+  background: #fff8e1;
+  padding: 50px 20px;
 }
+
+.home-farming-content .step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.step-drawing {
+  flex: 1 1 300px;
+}
+
+.step-content {
+  flex: 2;
+}
+
+/* Imagens com fade-in */
+.fade-in-image {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.fade-in-image.delayed {
+  animation-delay: 0
